@@ -1,1 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sarabun", sans-serif;
+}
+
 /* Start coding here */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #4a4a4a;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.header h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.chat-area {
+  background-color: white;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message {
+  display: flex;
+  width: 100%;
+}
+
+.message-left {
+  justify-content: flex-start;
+}
+
+.message-right {
+  justify-content: flex-end;
+}
+
+.message-bubble {
+  max-width: 60%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.bubble-left {
+  background-color: #d3d3d3;
+  color: black;
+}
+
+.bubble-right {
+  background-color: #34c759;
+  color: white;
+}
+
+.bubble-green {
+  background-color: #34c759;
+  color: white;
+}
+
+.bubble-light-grey {
+  background-color: #e5e5e5;
+  color: black;
+}
+
+/* Bubble tail for green bubbles (right side) */
+.bubble-green .bubble-tail {
+  position: absolute;
+  right: -8px;
+  bottom: 12px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 10px;
+  border-color: transparent transparent transparent #34c759;
+}
+
+/* Close button (X) positioned on light grey bubble */
+.close-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #4a4a4a;
+  color: white;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-weight: bold;
+}
+
+.bubble-light-grey {
+  position: relative;
+}
